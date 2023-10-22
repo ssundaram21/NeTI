@@ -1,0 +1,6 @@
+inference_dir: /data/vision/phillipi/perception/code/personalized-synthetic/data/outputs/debugging/neti/
+input_dir: /data/vision/phillipi/perception/code/personalized-synthetic/data/outputs/finetuned_models/neti/imagenet/neti_stable-diffusion-v1-4_n01531178
+iteration: 500
+n: 100
+num_images_per_prompt: 10
+torch_dtype: fp16
