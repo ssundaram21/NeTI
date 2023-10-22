@@ -11,7 +11,7 @@ from packaging import version
 from torch.utils.data import Dataset
 from torchvision import transforms
 from transformers import CLIPTokenizer
-
+import pdb
 from constants import IMAGENET_STYLE_TEMPLATES_SMALL, IMAGENET_TEMPLATES_SMALL
 
 if version.parse(version.parse(PIL.__version__).base_version) >= version.parse("9.1.0"):
@@ -53,7 +53,7 @@ class TextualInversionDataset(Dataset):
         self.flip_p = flip_p
 
         self.image_paths = list(self.data_root.glob("*"))
-
+        self.image_paths = [i for i in self.image_paths if ".txt" not in str(i) and ".md" not in str(i)]
         self.num_images = len(self.image_paths)
         self._length = self.num_images
 

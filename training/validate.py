@@ -15,6 +15,7 @@ from models.neti_clip_text_encoder import NeTICLIPTextModel
 from models.xti_attention_processor import XTIAttenProc
 from prompt_manager import PromptManager
 from sd_pipeline_call import sd_pipeline_call
+import pdb
 
 if is_wandb_available():
     import wandb
